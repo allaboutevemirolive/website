@@ -1,1 +1,20 @@
 website/
+
+# Dependencies
+frontend/node_modules
+
+# Testing
+frontend/coverage
+
+# Production
+frontend/build
+
+# Environment variables
+.env
+
+# Miscellaneous
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+*~
