@@ -10,6 +10,8 @@ import {
     FaTwitter,
     FaInstagram,
 } from 'react-icons/fa';
+import { IonIcon } from '@ionic/react';
+import { bookOutline } from 'ionicons/icons';
 
 import myAvatar from './assets/images/my-avatar.png';
 import designIcon from './assets/images/icon-design.svg';
@@ -212,12 +214,8 @@ const App = () => {
 
 
     return (
-
-
         <div>
-
             <main>
-
                 <aside className={`sidebar ${showContacts ? 'active' : ''}`}>
                     <div className="sidebar-info">
                         <figure className="avatar-box">
@@ -429,11 +427,11 @@ const App = () => {
 
                             <section className="timeline">
 
-                                <div class="title-wrapper">
-                                    <div class="icon-box">
-                                        <ion-icon name="book-outline"></ion-icon>
+                                <div className="title-wrapper">
+                                    <div className="icon-box">
+                                        <IonIcon icon={bookOutline} />
                                     </div>
-                                    <h3 class="h3">Education</h3>
+                                    <h3 className="h3">Education</h3>
                                 </div>
 
                                 <ul className="timeline-list">
@@ -463,16 +461,14 @@ const App = () => {
                             </section>
 
                             <section className="timeline">
-                                <div class="title-wrapper">
-                                    <div class="icon-box">
-                                        <ion-icon name="book-outline"></ion-icon>
+                                <div className="title-wrapper">
+                                    <div className="icon-box">
+                                        <IonIcon icon={bookOutline} />
                                     </div>
-                                    <h3 class="h3">Experience</h3>
+                                    <h3 className="h3">Experience</h3>
                                 </div>
 
-
                                 <ul className="timeline-list">
-
 
                                     <li class="timeline-item">
                                         <h4 class="h4 timeline-item-title">Creative director</h4>
