@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/css/style.css';
+import { IonIcon } from '@ionic/react';
+import { eyeOutline } from 'ionicons/icons';
 
 import project1 from '../assets/images/project-1.jpg';
 import project2 from '../assets/images/project-2.png';
@@ -141,7 +143,7 @@ const Portfolio = () => {
                             <a href={project.link}>
                                 <figure className="project-img">
                                     <div className="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
+                                        <IonIcon icon={eyeOutline} />
                                     </div>
                                     <img
                                         src={project.image}
