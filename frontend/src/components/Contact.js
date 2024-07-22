@@ -20,23 +20,20 @@ const ContactForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        // Collect form data
         const formData = new FormData(event.target);
         const data = {
-            fullname: formData.get('fullname'),
+            name: formData.get('fullname'),
             email: formData.get('email'),
-            message: formData.get('message'),
+            comment: formData.get('message'),
         };
 
-        // Basic validation
-        if (!data.fullname || !data.email || !data.message) {
+        if (!data.name || !data.email || !data.comment) {
             alert('Please fill out all fields.');
             return;
         }
 
         try {
-            // Submit the form data
-            const response = await fetch('/api/contact', {
+            const response = await fetch('http://localhost:3001/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -44,15 +41,12 @@ const ContactForm = () => {
                 body: JSON.stringify(data),
             });
 
-            // Check for successful response
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
 
             const result = await response.json();
             console.log('Success:', result);
-
-            // Optional: Clear the form or show a success message
             event.target.reset();
             alert('Message sent successfully!');
         } catch (error) {
